@@ -1,0 +1,138 @@
+<!doctype html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Đăng Nhập &amp; Đăng Ký</title>
+    <link rel="stylesheet" href="login.css" />
+  </head>
+  <body>
+    <!-- Container login -->
+    <div class="login">
+      <!-- Mockup Đăng Nhập (hiển thị mặc định) -->
+      <div class="auth-card active" id="loginCard">
+        <div class="auth-header">
+          <div class="brand-logo"></div>
+          <h2>Đăng Nhập</h2>
+          <p>Chào mừng bạn quay trở lại</p>
+        </div>
+
+        <form onsubmit="event.preventDefault()">
+          <div class="input-group">
+            <div class="icon-box"><span class="icon-mail"></span></div>
+            <input
+              type="text"
+              placeholder="Email hoặc Số điện thoại"
+              required
+            />
+          </div>
+
+          <div class="input-group">
+            <div class="icon-box"><span class="icon-lock"></span></div>
+            <input type="password" placeholder="Mật khẩu" required />
+            <button
+              type="button"
+              class="toggle-password"
+              aria-label="Hiện/ẩn mật khẩu"
+            >
+              <span class="icon-eye"></span>
+            </button>
+          </div>
+
+          <a href="#" class="forgot-password">Quên mật khẩu?</a>
+
+          <button type="submit" class="btn-submit">ĐĂNG NHẬP</button>
+
+          <div class="divider">
+            <span>Hoặc đăng nhập bằng</span>
+          </div>
+
+          <div class="social-login">
+            <button type="button" class="social-btn google" aria-label="Google">
+              G
+            </button>
+            <button
+              type="button"
+              class="social-btn facebook"
+              aria-label="Facebook"
+            >
+              f
+            </button>
+            <button type="button" class="social-btn apple" aria-label="Apple">
+              <span class="icon-apple"></span>
+            </button>
+          </div>
+
+          <div class="switch-mode">
+            Chưa có tài khoản? <a href="#" id="toRegister">Đăng ký ngay</a>
+          </div>
+        </form>
+      </div>
+
+      <!-- Mockup Đăng Ký (ẩn mặc định, kích hoạt qua JS) -->
+      <div class="auth-card" id="registerCard">
+        <div class="auth-header">
+          <div class="brand-logo"></div>
+          <h2>Đăng Ký</h2>
+          <p>Tạo tài khoản mới để bắt đầu</p>
+        </div>
+
+        <form onsubmit="event.preventDefault()">
+          <div class="input-group">
+            <div class="icon-box"><span class="icon-user"></span></div>
+            <input type="text" placeholder="Họ và tên" required />
+          </div>
+
+          <div class="input-group">
+            <div class="icon-box"><span class="icon-mail"></span></div>
+            <input type="email" placeholder="Email" required />
+          </div>
+
+          <div class="input-group">
+            <div class="icon-box"><span class="icon-lock"></span></div>
+            <input type="password" placeholder="Mật khẩu" required />
+          </div>
+
+          <div class="input-group">
+            <div class="icon-box"><span class="icon-lock"></span></div>
+            <input type="password" placeholder="Xác nhận mật khẩu" required />
+          </div>
+
+          <label class="terms-agreement">
+            <input type="checkbox" required />
+            <span>Tôi đồng ý với Điều khoản &amp; Chính sách bảo mật</span>
+          </label>
+
+          <button type="submit" class="btn-submit">ĐĂNG KÝ</button>
+
+          <div class="divider">
+            <span>Hoặc đăng ký bằng</span>
+          </div>
+
+          <div class="social-login">
+            <button type="button" class="social-btn google" aria-label="Google">
+              G
+            </button>
+            <button
+              type="button"
+              class="social-btn facebook"
+              aria-label="Facebook"
+            >
+              f
+            </button>
+            <button type="button" class="social-btn apple" aria-label="Apple">
+              <span class="icon-apple"></span>
+            </button>
+          </div>
+
+          <div class="switch-mode">
+            Đã có tài khoản? <a href="#" id="toLogin">Đăng nhập</a>
+          </div>
+        </form>
+      </div>
+    </div>
+    <main id="main"></main>
+
+    <script src="./login.js"></script>
+  </body>
+</html>
