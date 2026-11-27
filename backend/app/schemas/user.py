@@ -3,15 +3,16 @@ from pydantic import BaseModel, ConfigDict
 
 class UserCreat(BaseModel):
     username: str
+    email: str
     password: str
 
 
 class UserLogin(BaseModel):
-    username: str
+    email: str
     password: str
 
 
-class UserEsponse(BaseModel):
+class UserResponse(BaseModel):
     id: int
     email: str
     username: str
